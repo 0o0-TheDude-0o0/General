@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE PLUGIN>
+<PLUGIN name="TemplateTools"
+        version="2025.01.15"
+        min="7.2.0"
+        max="8.0.0">
+  
+  <CHANGELOG>
+    <CHANGE version="2025.01.15" date="2025-01-15">
+      - Full compatibility with Unraid 7.2.3+ React-based web interface
+      - Modern React component integration
+      - Updated Docker API compatibility for Docker 25+
+      - Enhanced GPU passthrough support for NVIDIA/AMD
+      - Improved TypeScript definitions
+      - Better error handling for new Docker socket API
+    </CHANGE>
+  </CHANGELOG>
+  
+  <DESCRIPTION>
+    Convert Docker run commands and docker-compose.yml files directly into Unraid templates with automatic path mapping and timezone detection.
+  </DESCRIPTION>
+  
+  <OVERVIEW>
+    <![CDATA[
+    <h2><i class="fa fa-magic"></i> Template Tools Plugin</h2>
+    <p>Convert Docker commands to Unraid templates instantly. Compatible with Unraid 7.2.3+.</p>
+    ]]>
+  </OVERVIEW>
+  
+  <SUPPORT>https://forums.unraid.net/</SUPPORT>
+  
+  <CATEGORY>Docker</CATEGORY>
+  
+  <ICON>https://raw.githubusercontent.com/0o0-TheDude-0o0/General/main/unraid-template-tools/templateTools.png</ICON>
+  
+  <FILES>
+    <FILE name="/usr/local/emhttp/plugins/templateTools/templateTools.php"
+          method="install"/>
+    <FILE name="/usr/local/emhttp/plugins/templateTools/include/dockerConverter.php"
+          method="install"/>
+    <FILE name="/usr/local/emhttp/plugins/templateTools/include/class.DockerConverter.php"
+          method="install"/>
+    <FILE name="/usr/local/emhttp/plugins/templateTools/javascript/templateTools-react.js"
+          method="install"/>
+    <FILE name="/usr/local/emhttp/plugins/templateTools/css/templateTools-react.css"
+          method="install"/>
+    <FILE name="/usr/local/emhttp/plugins/templateTools/scripts/install"
+          method="install" mode="0755"/>
+    <FILE name="/usr/local/emhttp/plugins/templateTools/scripts/uninstall"
+          method="install" mode="0755"/>
+  </FILES>
+  
+  <SCRIPTS>
+    <FILE name="/usr/local/emhttp/plugins/templateTools/scripts/install"
+          method="execute" mode="0755"/>
+    <FILE name="/usr/local/emhttp/plugins/templateTools/scripts/uninstall"
+          method="execute" mode="0755"/>
+  </SCRIPTS>
+  
+  <PERMS>
+    <FILE name="/boot/config/plugins/templateTools/" mode="0755"/>
+    <FILE name="/boot/config/plugins/dockerMan/templates-user/" mode="0755"/>
+  </PERMS>
+</PLUGIN>
