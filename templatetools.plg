@@ -129,7 +129,7 @@
   
   <CATEGORY>Docker</CATEGORY>
   
-  <ICON>https://raw.githubusercontent.com/yourusername/unraid-template-tools/main/templateTools.png</ICON>
+  <ICON>https://raw.githubusercontent.com/0o0-TheDude-0o0/unraid-template-tools/main/templateTools.png</ICON>
   
   <FILES>
     <!-- Main Plugin File - Updated for Unraid 7.2.3 -->
